@@ -8,6 +8,7 @@
 - [ ] Resolver el ejercicio siguiendo [un esquema de trabajo](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/haskell/trabajo.md), eso incluye
 - [ ] Ejecutar los tests con `stack test` y que den verde
 - [ ] A medida que vas resolviendo el ejercicio, subir [el progreso a git](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/git/resolverConflictos.md)
+- [ ] editar el readme y cambiar la primera linea  "https://github.com/pdepviernestm/2020-funcional-tp-5/workflows/Haskell%20CI/badge.svg" por "https://github.com/pdepviernestm/[**nombre de su repo**]/workflows/Haskell%20CI/badge.svg"
 
 ## Integrantes
 
@@ -63,9 +64,9 @@ Resolver este TP  **usando composición y aplicación parcial**.
 ### Parte 1: Hamburguesas
 
 Nos pusimos una hamburguesería y queremos implementar un sistema para calcular los precios de las hamburguesas que vamos a vender. Cada hamburugesa tiene un precio base y una lista de ingredientes. Partiendo de esto modelamos:
-Agrandar: cada vez que se agranda una hamburguesa se agrega otro ingrediente base ( Carne | Pollo).
-AgregarIngrediente: recibe un ingrediente y una hamburugesa lo agrega a la hamburguesa.
-descuento: recibe un % de descuento, y devuelve la hamburguesa con ese descuento aplicado al valor inicial.
+- **Agrandar**: cada vez que se agranda una hamburguesa se agrega otro ingrediente base ( Carne | Pollo).
+- **AgregarIngrediente**: recibe un ingrediente y una hamburugesa lo agrega a la hamburguesa.
+- **descuento**: recibe un % de descuento, y devuelve la hamburguesa con ese descuento aplicado al valor inicial.
 
 Toda esta parte ya esta modelada junto con los precios de cada ingrediente y la función para calcular el precio final junto con la  función para obtener el precio final de una hamburguesa. Y tambien la pdepBurguer que es un cuarto de libra agrandado 2 veces con panceta, cheddar y 20% de descuento.
 
