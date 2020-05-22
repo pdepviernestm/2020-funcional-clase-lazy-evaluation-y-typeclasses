@@ -64,8 +64,8 @@ Resolver este TP  **usando composición y aplicación parcial**.
 ### Parte 1: Hamburguesas
 
 Nos pusimos una hamburguesería y queremos implementar un sistema para calcular los precios de las hamburguesas que vamos a vender. Cada hamburugesa tiene un precio base y una lista de ingredientes. Partiendo de esto modelamos:
-- **Agrandar**: cada vez que se agranda una hamburguesa se agrega otro ingrediente base ( Carne | Pollo).
-- **AgregarIngrediente**: recibe un ingrediente y una hamburugesa lo agrega a la hamburguesa.
+- **Agrandar**: cada vez que se agranda una hamburguesa se agrega otro ingrediente base (Carne | Pollo), se elige el ingrediente base a agregar según lo que ya haya en la hamburguesa (si había carne se agrega carne, si había pollo se agrega pollo, si había ambos da igual cual se agregue).
+- **AgregarIngrediente**: recibe un ingrediente y una hambrugesa lo agrega a la hamburguesa.
 - **descuento**: recibe un % de descuento, y devuelve la hamburguesa con ese descuento aplicado al valor inicial.
 
 Toda esta parte ya esta modelada junto con los precios de cada ingrediente y la función para calcular el precio final junto con la  función para obtener el precio final de una hamburguesa. Y tambien la pdepBurguer que es un cuarto de libra agrandado 2 veces con panceta, cheddar y 20% de descuento.
@@ -74,15 +74,15 @@ Toda esta parte ya esta modelada junto con los precios de cada ingrediente y la 
 El negocio se agrando y queremos agregar las siguientes hamburguesas:
 - **dobleCuarto** = es un cuarto de libra con carne y cheddar
 - **bigPdep** =  es un doble cuarto con curry
-- **delDia** = es una promo para agregarle a cada hamburguesa que le agrega Papas y un descuento del 30%
+- **delDia** = es una promo que dada una hamburguesa, le agrega Papas y un descuento del 30%. Por ej, podría pedir una big pdep del dia y debería ser como una big pdep (doble cuarto con curry) pero con papas y el descuento del 30%.
 
-Papas ::  cuestan 10
+Las papas son un ingrediente que cuesta $10.
 
 ### PARTE 3: algunos cambios más 
 
 Queremos modelar los siguientes modificadores:
-- **hacerVeggie** : cambia los ingredientes base por PatiVegano (ingrediente base tambien de precio 10)
-- **cambiarPanDePati** : cambia el Pan por PanIntegral (precio 3)
+- **hacerVeggie** : cambia todos los ingredientes base que hayan en la hamburguesa por PatiVegano (ingrediente base tambien de precio 10).
+- **cambiarPanDePati** : cambia el Pan que haya en la hamburguesa por PanIntegral (ingrediente de precio 3).
 
 - hacer el **dobleCuartoVegano** que es un dobleCuarto veggie con pan integral.
 
