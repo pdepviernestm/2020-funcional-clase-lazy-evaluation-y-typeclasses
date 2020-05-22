@@ -8,7 +8,7 @@
 - [ ] Resolver el ejercicio siguiendo [un esquema de trabajo](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/haskell/trabajo.md), eso incluye
 - [ ] Ejecutar los tests con `stack test` y que den verde
 - [ ] A medida que vas resolviendo el ejercicio, subir [el progreso a git](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/git/resolverConflictos.md)
-- [ ] editar el readme y cambiar la primera linea  "https://github.com/pdepviernestm/2020-funcional-tp-5/workflows/Haskell%20CI/badge.svg" por "https://github.com/pdepviernestm/[**nombre de su repo**]/workflows/Haskell%20CI/badge.svg"
+- [ ] editar el readme y cambiar la primera linea  "https://github.com/pdepviernestm/2020-funcional-tp-5/workflows/Haskell%20CI/badge.svg" por "https://github.com/pdepviernestm/ [**nombre de su repo**] /workflows/Haskell%20CI/badge.svg"
 
 ## Integrantes
 
