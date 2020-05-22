@@ -11,7 +11,7 @@ data Ingrediente = Carne | Pollo | Cheddar | Panceta | Pan | Curry  deriving (Sh
 type Plata = Number
 
 cuartoDeLibra :: Hamburguesa
-cuartoDeLibra = Hamburguesa { ingredientes = [Pan, Carne, Cheddar, Pan], valorInicial = 20 }
+cuartoDeLibra = implementame
 
 precioIngrediente :: Ingrediente -> Plata
 precioIngrediente Carne = 20
