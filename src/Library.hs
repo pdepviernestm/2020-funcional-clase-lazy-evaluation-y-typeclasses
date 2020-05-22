@@ -21,15 +21,6 @@ precioIngrediente Cheddar = 10
 precioIngrediente Pollo = 10
 precioIngrediente Curry = 5
 
-agregarIngrediente :: Hamburguesa -> Ingrediente -> Hamburguesa
-agregarIngrediente (Hamburguesa ingredientes valorInicial) ingrediente = Hamburguesa (ingrediente : ingredientes) valorInicial
-
-cambiarPrecio :: (Plata -> Plata) -> Hamburguesa -> Hamburguesa
-cambiarPrecio cambio (Hamburguesa ingredientes valorInicial) = Hamburguesa ingredientes (cambio valorInicial)
-
-agrandar :: Hamburguesa -> Hamburguesa
-agrandar hamburguesa = agregarIngrediente hamburguesa (base hamburguesa)
-
 base :: Hamburguesa -> Ingrediente
 base hamburguesa = head (filter esIngredienteBase (ingredientes hamburguesa))
 
@@ -39,14 +30,24 @@ esIngredienteBase ingrediente = elem ingrediente ingredientesBase
 ingredientesBase :: [Ingrediente]
 ingredientesBase = [Carne, Pollo]
 
-descuento :: Number -> Hamburguesa -> Hamburguesa
-descuento porcentaje =  cambiarPrecio (\precio -> precio - (precio * porcentaje / 100))
-
 precio :: Hamburguesa -> Plata
 precio hamburguesa = valorInicial hamburguesa + sum (map precioIngrediente (ingredientes hamburguesa))
 
+cambiarPrecio :: (Plata -> Plata) -> Hamburguesa -> Hamburguesa
+cambiarPrecio cambio (Hamburguesa ingredientes valorInicial) = Hamburguesa ingredientes (cambio valorInicial)
+
+agregarIngrediente :: Ingrediente -> Hamburguesa -> Hamburguesa
+agregarIngrediente ingrediente (Hamburguesa ingredientes valorInicial) = Hamburguesa (ingrediente : ingredientes) valorInicial
+
+agrandar :: Hamburguesa -> Hamburguesa
+agrandar hamburguesa = agregarIngrediente (base hamburguesa) hamburguesa
+
+descuento :: Number -> Hamburguesa -> Hamburguesa
+descuento porcentaje =  cambiarPrecio (\precio -> precio - (precio * porcentaje / 100))
+
 pdepBurger :: Hamburguesa
-pdepBurger = implementame
+pdepBurger =
+    (descuento 20 . agregarIngrediente Cheddar . agregarIngrediente Panceta . agrandar . agrandar) cuartoDeLibra
 
 dobleCuarto = implementame
 

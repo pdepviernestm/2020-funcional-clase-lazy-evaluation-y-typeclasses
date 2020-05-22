@@ -9,7 +9,7 @@ main = hspec $ do
   describe "parte 1 funciones basicas de agregados" $ do
     describe "agregar ingrediente" $ do
       it "retorna la hamburguesa con el ingrediente agregado" $ do
-        agregarIngrediente cuartoDeLibra Panceta `shouldBe` Hamburguesa {ingredientes = [Panceta,Pan,Carne,Cheddar,Pan], valorInicial = 20.0}
+        agregarIngrediente Panceta cuartoDeLibra `shouldBe` Hamburguesa {ingredientes = [Panceta,Pan,Carne,Cheddar,Pan], valorInicial = 20.0}
     describe "agrandar" $ do
       it "retorna la hamburguesa con el ingrediente base duplicado" $ do
         agrandar cuartoDeLibra `shouldBe` Hamburguesa {ingredientes = [Carne,Pan,Carne,Cheddar,Pan], valorInicial = 20.0}
