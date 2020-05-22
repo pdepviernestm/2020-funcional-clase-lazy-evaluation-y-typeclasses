@@ -11,7 +11,7 @@ data Ingrediente = Carne | Pollo | Cheddar | Panceta | Pan | Curry  deriving (Sh
 type Plata = Number
 
 cuartoDeLibra :: Hamburguesa
-cuartoDeLibra = implementame
+cuartoDeLibra = Hamburguesa { ingredientes = [Pan, Carne, Cheddar, Pan], valorInicial = 20 }
 
 precioIngrediente :: Ingrediente -> Plata
 precioIngrediente Carne = 20
@@ -46,7 +46,7 @@ precio :: Hamburguesa -> Plata
 precio hamburguesa = valorInicial hamburguesa + sum (map precioIngrediente (ingredientes hamburguesa))
 
 pdepBurger :: Hamburguesa
-pdepBurger = descuento  20 (agregarIngrediente (agregarIngrediente ( agrandar (agrandar cuartoDeLibra)) Cheddar) Panceta)
+pdepBurger = implementame
 
 dobleCuarto = implementame
 
