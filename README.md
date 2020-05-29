@@ -1,14 +1,14 @@
-# TP-5 ![Haskell CI](https://github.com/pdepviernestm/2020-funcional-tp-5/workflows/Haskell%20CI/badge.svg)
+# TP-Integrador - Simulacro de Parcial ![Haskell CI](https://github.com/pdepviernestm/2020-funcional-tp-integrador/workflows/Haskell%20CI/badge.svg)
 
 ## Tareas
 
 - [ ] Aceptar el assignment y clonar el repositorio con el ejercicio
-- [ ] Ir a la carpeta donde descargaste la kata. Ejemplo: `cd /home/juan/haskell/2020-funcional-tp-4`. Ejecutar `stack build --test`.
+- [ ] Ir a la carpeta donde descargaste el TP. Ejemplo: `cd /home/juan/haskell/2020-funcional-tp-integrador`. Ejecutar `stack build --test`.
 - [ ] Reemplazar la lista de integrantes con los nombres de los integrantes del equipo en el archivo README.md
 - [ ] Resolver el ejercicio siguiendo [un esquema de trabajo](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/haskell/trabajo.md), eso incluye
 - [ ] Ejecutar los tests con `stack test` y que den verde
 - [ ] A medida que vas resolviendo el ejercicio, subir [el progreso a git](https://github.com/pdep-utn/enunciados-miercoles-noche/blob/master/pages/git/resolverConflictos.md)
-- [ ] editar el readme y cambiar la primera linea  "https://github.com/pdepviernestm/2020-funcional-tp-5/workflows/Haskell%20CI/badge.svg" por "https://github.com/pdepviernestm/ [**nombre de su repo**] /workflows/Haskell%20CI/badge.svg"
+- [ ] editar el readme y cambiar la primera linea  "https://github.com/pdepviernestm/2020-funcional-tp-integrador/workflows/Haskell%20CI/badge.svg" por "https://github.com/pdepviernestm/ [**nombre de su repo**] /workflows/Haskell%20CI/badge.svg"
 
 ## Integrantes
 
@@ -19,7 +19,7 @@
 
 ## Objetivos
 
-Los objetivos de este tp son practicar los conceptos vistos en la clase: aplicación parcial y composición
+Este TP integra todos los conceptos que vimos hasta ahora, y fue un parcial que se tomó en algún momento así que también sirve como práctica de parcial.
 
 ## Pre-requisitos
 
@@ -59,36 +59,13 @@ Para conocer un poco más del testeo unitario automatizado recomendamos leer [es
 
 ## El enunciado
 
-Resolver este TP  **usando composición y aplicación parcial**.
+En este TP hay que escribir el código **y los cuerpos de los tests** según el enunciado que se encuentra acá:
 
-### Parte 1: Hamburguesas
-
-Nos pusimos una hamburguesería y queremos implementar un sistema para calcular los precios de las hamburguesas que vamos a vender. Cada hamburugesa tiene un precio base y una lista de ingredientes. Partiendo de esto modelamos:
-- **Agrandar**: cada vez que se agranda una hamburguesa se agrega otro ingrediente base (Carne | Pollo), se elige el ingrediente base a agregar según lo que ya haya en la hamburguesa (si había carne se agrega carne, si había pollo se agrega pollo, si había ambos da igual cual se agregue).
-- **AgregarIngrediente**: recibe un ingrediente y una hambrugesa lo agrega a la hamburguesa.
-- **descuento**: recibe un % de descuento, y devuelve la hamburguesa con ese descuento aplicado al valor inicial.
-
-Toda esta parte ya esta modelada junto con los precios de cada ingrediente y la función para calcular el precio final junto con la  función para obtener el precio final de una hamburguesa. Y tambien la pdepBurguer que es un cuarto de libra agrandado 2 veces con panceta, cheddar y 20% de descuento.
-
-### PARTE 2: Algunas hamburguesas más
-El negocio se agrando y queremos agregar las siguientes hamburguesas:
-- **dobleCuarto** = es un cuarto de libra con carne y cheddar
-- **bigPdep** =  es un doble cuarto con curry
-- **delDia** = es una promo que dada una hamburguesa, le agrega Papas y un descuento del 30%. Por ej, podría pedir una big pdep del dia y debería ser como una big pdep (doble cuarto con curry) pero con papas y el descuento del 30%.
-
-Las papas son un ingrediente que cuesta $10.
-
-### PARTE 3: algunos cambios más 
-
-Queremos modelar los siguientes modificadores:
-- **hacerVeggie** : cambia todos los ingredientes base que hayan en la hamburguesa por PatiVegano (ingrediente base tambien de precio 10).
-- **cambiarPanDePati** : cambia el Pan que haya en la hamburguesa por PanIntegral (ingrediente de precio 3).
-
-- hacer el **dobleCuartoVegano** que es un dobleCuarto veggie con pan integral.
+https://docs.google.com/document/d/1eXNi7FpgDw1BS4swb-DX7yD1GprDibsQfkN5nSIsWqQ/edit?usp=sharing
 
 ## Fecha de entrega
 
-Viernes 29 de Mayo.
+Viernes 5 de Junio.
 
 ## Que hacer cuando terminan el TP
 
