@@ -63,7 +63,7 @@ replicar = implementame
 -- const 1 (foldr const 0 xs)
 -- 1
 
--- En cambio con fold:
+-- En cambio con foldl:
 
 -- foldl _ semilla [] = semilla
 -- foldl f semilla (x:xs) = f x (foldl f semilla xs)
