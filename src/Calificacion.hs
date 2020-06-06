@@ -37,7 +37,9 @@ instance Calificacion Number where
   promociono = (>=8)
 
 instance Calificacion NotaConceptual where  
-  aprobo Insuficiente = False
-  aprobo _ = True
-  promociono Sobresaliente = True
-  promociono _ = False
+  aprobo = implementame
+  promociono = implementame
+
+vaAFinal :: Persona -> Bool
+vaAFinal persona = all aprobo (notas persona) &&
+  any (not.promociono) (notas persona)

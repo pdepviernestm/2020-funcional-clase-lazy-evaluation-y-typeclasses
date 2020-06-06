@@ -3,32 +3,43 @@ import PdePreludat
 
 -- unos == [1,1,1,1,1,1,1,1,1,1,1...]
 unos :: [Number]
-unos = implementame
+unos = 1 : unos
 
 -- naturales == [1,2,3,4,5,6,7,8,9...]
 naturales :: [Number]
-naturales = implementame
+naturales = 1 : map (+1) naturales
+
+potenciasDe n = 1 : map (*n) (potenciasDe n)
+
+potenciar base exponente = potenciasDe base !! exponente
 
 -- chasquidoDeThanos ["Capitan America", "Bucky", "Ironman", "Spiderman"] ==
 --    ["Capitan America", "Ironman"]
 chasquidoDeThanos :: [a] -> [a]
-chasquidoDeThanos = implementame
+chasquidoDeThanos [] = []
+chasquidoDeThanos [unico] = [unico]
+chasquidoDeThanos (primero : segundo : resto) = primero : chasquidoDeThanos resto
 
 -- impares == [1,3,5,7,9...]
 impares :: [Number]
-impares = implementame
+impares = chasquidoDeThanos naturales
+--impares = filter odd naturales
+--impares = [1,3..]
 
 -- pares == [2,4,6,8,10,12...]
 pares :: [Number]
-pares = implementame
+pares = (chasquidoDeThanos . tail) naturales
+--pares = [2,4..]
+--pares = filter even naturales
 
 -- repetir 1 == [1,1,1,1,1,1,1,1,1...]
+-- repetir "hola" == ["hola", "hola", "hola"...]
 repetir :: a -> [a]
-repetir = implementame
+repetir elemento = elemento : repetir elemento
 
 -- replicar 5 "hola" = ["hola","hola","hola","hola","hola"]
 replicar :: Number -> a -> [a]
-replicar = implementame
+replicar veces elemento = (take veces . repetir) elemento
 
 -- Que pasa si evaluo...?
 
@@ -57,7 +68,7 @@ replicar = implementame
 -- Por que?
 
 -- foldr _ semilla [] = semilla
--- foldr f semilla (x:xs) = f x (foldr semilla xs)
+-- foldr f semilla (x:xs) = f x (foldr f semilla xs)
 
 -- foldr const 0 [1..]
 -- const 1 (foldr const 0 xs)
@@ -66,7 +77,7 @@ replicar = implementame
 -- En cambio con foldl:
 
 -- foldl _ semilla [] = semilla
--- foldl f semilla (x:xs) = f x (foldl f semilla xs)
+-- foldl f semilla (x:xs) = foldl f (f semilla x) xs
 
 -- foldl const 0 [1..]
 -- foldl const (const 0 1) [2..]
@@ -87,3 +98,4 @@ replicar = implementame
 
 -- instance Show (a -> b) where
 --    show _ = "<una función>"
+
